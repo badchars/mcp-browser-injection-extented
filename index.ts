@@ -908,7 +908,7 @@ Testing Methodology:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🚀 ITERATIVE TESTING WORKFLOW (HOW LLM SHOULD USE THIS TOOL)
+ITERATIVE TESTING WORKFLOW (HOW LLM SHOULD USE THIS TOOL)
 
 Phase 1: RECONNAISSANCE
 1. Navigate to target URL
@@ -1079,13 +1079,13 @@ Remember: Test ONE payload at a time, analyze results, adapt your strategy, and 
     let browser: Browser;
     switch (browserType) {
       case 'firefox':
-        browser = await firefox.launch({ headless: true });
+        browser = await firefox.launch({ headless: false });
         break;
       case 'webkit':
-        browser = await webkit.launch({ headless: true });
+        browser = await webkit.launch({ headless: false });
         break;
       default:
-        browser = await chromium.launch({ headless: true });
+        browser = await chromium.launch({ headless: false });
     }
 
     const context = await browser.newContext({
